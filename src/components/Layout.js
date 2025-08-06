@@ -1,21 +1,23 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import image1 from '../assets/images/landing_herosection1.jpeg';
-import image2 from '../assets/images/landing_herosection2.jpeg';
-import image3 from '../assets/images/landing_herosection3.jpeg';
+import image1 from '../assets/images/gallery/gal6.jpg';
+// import image2 from '../assets/images/landing_herosection5.jpg';
+// import image3 from '../assets/images/landing_herosection2.jpeg';
 
-const images = [image1, image2, image3];
+
+
+// const images = [image1, image2, image3];
 
 const Layout = ({ children, heroContent }) => {
-  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+  // const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Change image every 10 seconds
-    return () => clearInterval(interval);
-  }, []);
+  // React.useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 10000); // Change image every 10 seconds
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -24,17 +26,17 @@ const Layout = ({ children, heroContent }) => {
 
       {/* Hero Section */}
       <div 
-        className="relative bg-cover bg-center h-[60vh] md:h-[80vh] hero-section"
+        className="relative bg-cover bg-center h-[75vh] sm:h-[85vh] md:h-[80vh] lg:h-[90vh]"
         style={{
-          backgroundImage: `url(${images[currentImageIndex]})`,
-          transition: "background-image 1s ease-in-out"
+          backgroundImage: `url(${image1})`,
+          // transition: "background-image 1s ease-in-out"
         }}
       >
         {/* Gray Overlay */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-20"></div>
         
         {/* Hero Content */}
-        <div className="relative h-full container mx-auto px-4 md:px-6">
+        <div className="relative h-full container mx-auto px-6 md:px-6">
           {heroContent}
         </div>
       </div>
@@ -50,7 +52,7 @@ const Layout = ({ children, heroContent }) => {
       <Footer />
       
       {/* Inline CSS for Hero Section */}
-      <style jsx>{`
+      {/* <style jsx>{`
         @keyframes backgroundTransition {
           0%, 25% {
             background-image: url(${image1});
@@ -68,7 +70,7 @@ const Layout = ({ children, heroContent }) => {
             background-size: cover;
           }
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 };
