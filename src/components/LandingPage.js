@@ -7,9 +7,9 @@ import gal4 from "../assets/images/gallery/gal4.jpg";
 
 const LandingPage = () => {
   const heroContent = (
-    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-8">
-      <div className="bg-gray-800 bg-opacity-70 p-8 md:p-12 rounded-lg shadow-lg">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-600 mb-4">
+    <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
+      <div className="bg-gray-800 bg-opacity-90 px-6 py-10 sm:px-8 sm:py-12 md:px-10 md:py-16 rounded-xl shadow-xl max-w-3xl w-full">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-yellow-500 mb-4 leading-tight">
           Welcome to MS Builders
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl">
