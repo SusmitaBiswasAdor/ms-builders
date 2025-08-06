@@ -1,6 +1,7 @@
 // CertificatesAndAwards.js
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
+
 import Layout from "./Layout";
 
 // Import award images
@@ -13,11 +14,19 @@ import award7 from "../assets/images/awards/award7.jpg";
 import award10 from "../assets/images/awards/award10.jpg";
 import award11 from "../assets/images/awards/award11.jpg";
 import award12 from "../assets/images/awards/award12.jpg";
+import award0_1 from "../assets/images/awards/award0_1.jpg";
+import award0_2 from "../assets/images/awards/award0_2.jpg";
+import award0_3 from "../assets/images/awards/award0_3.jpg";
+import award0_4 from "../assets/images/awards/award0_4.jpg";
 
 const CertificatesAndAwards = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const awardImages = useMemo(() => [
+    award0_1,
+    award0_2,
+    award0_3,
+    award0_4,
     award1,
     award2,
     award3,
@@ -66,15 +75,25 @@ const CertificatesAndAwards = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
+  // const heroContent = (
+  //   <>  
+  //     <div className="absolute bottom-20 left-5 right-5 text-yellow-600">
+  //       <h1 className="text-7xl font-extrabold mb-4">Achievements</h1>
+  //       <p className="text-lg text-gray-300">
+  //         Recognizing our dedication to excellence and professionalism.
+  //       </p>
+  //     </div>
+  //   </>
+  // );
   const heroContent = (
     <>
       <div className="absolute bottom-20 left-5 right-5">
         <div className="bg-gray-800 bg-opacity-70 p-8 rounded-lg backdrop-blur-sm max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-600 mb-4">
-            Certificates & Awards
+          Achievements
           </h1>
           <p className="text-xl text-white font-medium drop-shadow">
-            Recognition of our excellence and achievements
+          Recognizing our dedication to excellence and professionalism.
           </p>
         </div>
       </div>
