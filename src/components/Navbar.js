@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo/logo.png";
+import logo2 from "../assets/images/logo/logo2.jpg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,6 +33,11 @@ const Navbar = () => {
             <img
               src={logo}
               alt="MS Builders Logo"
+              className="h-12 w-auto mr-2"
+            />
+           <img
+              src={logo2}
+              alt="ISO Certification Logo"
               className="h-12 w-auto"
             />
           </Link>
@@ -53,8 +59,8 @@ const Navbar = () => {
             <Link to="/clients" className="text-white hover:text-yellow-500 transition-colors">
               Clients
             </Link>
-            <Link to="/certificates-and-awards" className="text-white hover:text-yellow-500 transition-colors">
-              Awards
+            <Link to="/achievements" className="text-white hover:text-yellow-500 transition-colors">
+              Achievements
             </Link>
             <Link to="/gallery" className="text-white hover:text-yellow-500 transition-colors">
               Gallery
@@ -124,11 +130,11 @@ const Navbar = () => {
                 Clients
               </Link>
               <Link
-                to="/certificates-and-awards"
+                to="/achievements"
                 className="block px-3 py-2 text-white hover:text-yellow-500 transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                Awards
+                Achievements
               </Link>
               <Link
                 to="/gallery"
